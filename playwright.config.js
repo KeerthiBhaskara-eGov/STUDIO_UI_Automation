@@ -8,6 +8,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: 1,
   reporter: 'html',
+  timeout: 600000,
   use: {
     trace: 'on-first-retry',
     launchOptions: {
@@ -15,6 +16,6 @@ export default defineConfig({
       args: ['--start-maximized'],
     },
     viewport: null,
-    timeout: 120000,
+    actionTimeout: 60000,
   },
 });

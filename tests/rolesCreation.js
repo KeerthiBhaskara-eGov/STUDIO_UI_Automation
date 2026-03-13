@@ -1,12 +1,12 @@
 // Roles creation module
 export async function createRoles(page) {
-  await page.getByRole('button', { name: 'Define Roles' }).click();
-  await page.locator('div').filter({ hasText: /^Create New Role$/ }).click();
+  await page.getByRole('button', { name: 'Manage Roles' }).click();
+  await page.getByRole('button', { name: 'Create New Role' }).click();
   await page.getByRole('textbox', { name: 'Role name' }).click();
-  await page.getByRole('textbox', { name: 'Role name' }).fill('Hospital Management');
-  await page.getByRole('checkbox').first().check();
-  await page.getByRole('checkbox').nth(1).check();
-  await page.getByRole('checkbox').nth(2).check();
-  await page.getByRole('button', { name: 'Create Role' }).click();
-  await page.getByRole('link', { name: 'Service Designer' }).click();
+  await page.getByRole('textbox', { name: 'Role name' }).fill('Employee');
+  await page.getByRole('checkbox', { name: 'Editor' }).check();
+  await page.getByRole('checkbox', { name: 'Viewer' }).check();
+  await page.getByRole('checkbox', { name: 'Creator' }).check();
+  await page.getByRole('button', { name: 'Create Role', exact: true }).click();
+  await page.getByRole('button', { name: 'Back', exact: true }).click();
 }

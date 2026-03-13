@@ -5,17 +5,18 @@ import path from 'path';
 const DATA_FILE = path.join(process.cwd(), 'test-data.json');
 
 export async function createService(page) {
-  await page.getByRole('button', { name: 'App Dashboard' }).click();
-  await page.locator('div').filter({ hasText: /^Create a New Service$/ }).click();
+  await page.getByRole('button', { name: 'Get Started' }).click();
+  await page.getByText('Create a New Service').click();
 
   const randomModuleName = `Module_${Math.random().toString(36).substring(2, 9)}`;
   const randomServiceName = `Service_${Math.random().toString(36).substring(2, 9)}`;
 
-  await page.getByRole('textbox', { name: 'Enter application name' }).click();
-  await page.getByRole('textbox', { name: 'Enter application name' }).fill(randomModuleName);
-  await page.getByRole('textbox', { name: 'Enter module name' }).click();
-  await page.getByRole('textbox', { name: 'Enter module name' }).fill(randomServiceName);
-  await page.getByRole('button', { name: 'Proceed' }).click();
+  await page.getByRole('textbox').click();
+  await page.getByRole('textbox').fill(randomModuleName);
+  await page.getByRole('button', { name: 'Next' }).click();
+  await page.getByRole('textbox').click();
+  await page.getByRole('textbox').fill(randomServiceName);
+  await page.getByRole('button', { name: 'Next' }).click();
 
   const data = {
     moduleName: randomModuleName,

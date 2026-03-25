@@ -47,9 +47,9 @@ npx playwright install
 npx playwright test
 
 # Run a specific test suite
-npx playwright test tests/Designer.spec.js
-npx playwright test tests/EMPApplication.spec.js
-npx playwright test tests/Citizen_Applicationflow.spec.js
+npx playwright test Designer.spec.js
+npx playwright test EMPApplication.spec.js
+npx playwright test Citizen_Applicationflow.spec.js
 
 # Run with headed browser (visible UI)
 npx playwright test --headed

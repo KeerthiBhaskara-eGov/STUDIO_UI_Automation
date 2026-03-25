@@ -17,6 +17,7 @@ test('complete e2e flow', async ({ page }) => {
   // Publish the service
   await page.getByRole('button', { name: 'Publish Service' }).click();
   await page.getByRole('button', { name: 'Publish', exact: true }).click();
+  await page.waitForTimeout(60000);
   await page.goto('https://unified-dev.digit.org/digit-studio/employee/servicedesigner/LandingPage');
-
+  await page.pause();
 });

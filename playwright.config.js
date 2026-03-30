@@ -2,6 +2,7 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
+  globalSetup: './tests/helpers/global-setup.js',
   testDir: './tests',
   fullyParallel: false,
   forbidOnly: !!process.env.CI,

@@ -1,6 +1,8 @@
 {
-  "moduleName": "Module_6wt6wq9",
-  "serviceName": "Service_trzjwaz",
+  "moduleName": "Application",
+  "serviceName": "Complaints_Management",
   "createdAt": "2026-03-17T07:40:20.997Z",
-  "applicationNumber": "service_trzjwaz-module_6wt6wq9-app-2026-03-25-000995"
+  "applicationNumber": "application-complaints_management-app-2026-03-26-001017",
+  "syncedFromConfig": true,
+  "syncedAt": "2026-03-26T09:05:53.203Z"
 }

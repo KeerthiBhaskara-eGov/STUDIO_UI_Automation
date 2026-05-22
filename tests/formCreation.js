@@ -27,7 +27,8 @@ export async function createForm(page) {
   await page.getByRole('button', { name: 'Submit', exact: true }).click();
 
   // Add display logic to Required health reports
-  await page.getByText('Required health reports', { exact: true }).click();
+  //await page.getByText('Required health reports', { exact: true }).click();
+  await page.getByLabel('Side panel body').getByText('Required health reports').click();
   await page.getByRole('button', { name: 'Logic' }).click();
   await page.locator('.digit-switch-shape-off').click();
   await page.getByRole('button', { name: 'Add Display Logic' }).click();

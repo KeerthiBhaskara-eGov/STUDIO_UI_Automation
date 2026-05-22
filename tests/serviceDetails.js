@@ -5,7 +5,7 @@ import path from 'path';
 const DATA_FILE = path.join(process.cwd(), 'test-data.json');
 
 export async function createService(page) {
-  await page.getByRole('button', { name: 'Get Started' }).click();
+  // await page.getByRole('button', { name: 'Get Started' }).click();
   await page.getByText('Create a New Service').click();
 
   const randomModuleName = `Module_${Math.random().toString(36).substring(2, 9)}`;
